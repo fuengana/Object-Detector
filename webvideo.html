@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Webcam AI Tracker</title>
+    <style>
+        body { font-family: sans-serif; text-align: center; }
+        #container { position: relative; display: inline-block; }
+        #webcam, #canvas { display: block; }
+        #canvas { position: absolute; top: 0; left: 0; }
+    </style>
+</head>
+<body>
+    <h1>AI Object Tracking</h1>
+    <div id="container">
+        <video id="webcam" autoplay playsinline></video>
+        <canvas id="canvas"></canvas>
+    </div>
+    <button id="start-button">Start Tracking</button>
+
+    <!-- Import TensorFlow.js and the pre-trained COCO-SSD model -->
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow-models/coco-ssd"></script>
+    <script src="webcam-tracker.js"></script>
+</body>
+</html>
